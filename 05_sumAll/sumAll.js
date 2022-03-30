@@ -1,6 +1,11 @@
 const sumAll = function(first, second) {
-    let min = Math.min(first, second);
-    let max = Math.max(first, second);
+    let max;
+    let min;
+    if(Number.isInteger(first) && Number.isInteger(second)) {
+        min = Math.min(first, second);
+        max = Math.max(first, second);
+    }
+    
 
     let total = 0;
 
@@ -10,12 +15,9 @@ const sumAll = function(first, second) {
         }
         return total;
 
-    }else{
-        return 'ERROR'
     }
 
-    
-
+    return 'ERROR'
     
 };
 
